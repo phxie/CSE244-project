@@ -1,0 +1,527 @@
+papers:
+- abstract: 'Markov Decision Processes (MDPs) are a classical model for decision making
+    in the presence of uncertainty. Often they are viewed as state transformers with
+    planning objectives defined with respect to paths over MDP states. An increasingly
+    popular alternative is to view them as distribution transformers, giving rise
+    to a sequence of probability distributions over MDP states. For instance, reachability
+    and safety properties in modeling robot swarms or chemical reaction networks are
+    naturally defined in terms of probability distributions over states. Verifying
+    such distributional properties is known to be hard and often beyond the reach
+    of classical state-based verification techniques. In this work, we consider the
+    problems of certified policy (i.e. controller) verification and synthesis in MDPs
+    under distributional reach-avoidance specifications. By certified we mean that,
+    along with a policy, we also aim to synthesize a (checkable) certificate ensuring
+    that the MDP indeed satisfies the property. Thus, given the target set of distributions
+    and an unsafe set of distributions over MDP states, our goal is to either synthesize
+    a certificate for a given policy or synthesize a policy along with a certificate,
+    proving that the target distribution can be reached while avoiding unsafe distributions.
+    To solve this problem, we introduce the novel notion of distributional reach-avoid
+    certificates and present automated procedures for (1) synthesizing a certificate
+    for a given policy, and (2) synthesizing a policy together with the certificate,
+    both providing formal guarantees on certificate correctness. Our experimental
+    evaluation demonstrates the ability of our method to solve several non-trivial
+    examples, including a multi-agent robot-swarm model, to synthesize certified policies
+    and to certify existing policies. '
+  keywords: Formal verification, validation and synthesis, Trust and reputation, Markov
+    decisions processes, Planning under uncertainty
+  subcategory: Agent-based and Multi-agent Systems
+  title: 'Certified Policy Verification and Synthesis for MDPs under Distributional
+    Reach-Avoidance Properties '
+  url: https://doi.org/10.24963/ijcai.2024/1
+- abstract: 'We introduce "Truth Table net"'' (TTnet), a novel Deep Neural Network
+    (DNN) architecture designed to provide excellent scalability/compactness trade-offs
+    among DNNs, allowing in turn to tackle the DNN challenge of fast formal verification.
+    TTnet is constructed using Learning Truth Table (LTT) filters, analogous to how
+    a Deep Convolutional Neural Network (DCNN) is built upon convolutional filters.
+    The differentiable LTT filters are unique by their dual form: they are both a
+    neural network-based function and a small-sized truth table that can be computed
+    within a practical time frame. This characteristic guarantees, by design and independently
+    of the overall architecture, the ability to practically extract an efficient (in
+    terms of the number of logical gates) and functionally equivalent Conjunctive
+    Normal Form (CNF) Boolean logic gate implementation. This CNF circuit is even
+    optimal when the LTT truth table''s input bit size n < 12. In particular, TTnet
+    architecture is the first differentiable DNN with as dual form a compact logic
+    gate representation that can scale to datasets larger than CIFAR-10: we achieve
+    an accuracy of 41% on the ImageNet dataset while ensuring that each LTT filter
+    truth table is fully computable within 2^{16} operations. We further compare the
+    compactness and scalability performances of TTnet Boolean logic circuit representation
+    to state-of-the-art differentiable logic DNNs across tabular, MNIST, and CIFAR-10
+    datasets. We emphasize that TTnet is the first solution to the open problem of
+    designing differentiable convolutional neural networks with an exact dual logic
+    gate circuit representation, bridging the gap between symbolic AI and trainable
+    DCNNs. Finally, as improving DNNs compactness in Boolean logic circuit form reduces
+    the complexity of their formal verification, we demonstrate TTnet effectiveness
+    in exact sound and complete formal verification. Notably, our model achieves robustness
+    verification in 10ms vs 100s for traditional state-of-the-art DNNs solvers. '
+  keywords: Formal verification, validation and synthesis, Trustworthy AI, Satisfiabilty,
+    Convolutional networks
+  subcategory: Agent-based and Multi-agent Systems
+  title: 'Truth Table Net: Scalable, Compact & Verifiable Neural Networks with a Dual
+    Convolutional Small Boolean Circuit Networks Form'
+  url: https://doi.org/10.24963/ijcai.2024/2
+- abstract: 'Large language models (LLMs) have enabled remarkable advances in automated
+    task-solving with multi-agent systems. However, most existing LLM-based multi-agent
+    approaches rely on predefined agents to handle simple tasks, limiting the adaptability
+    of multi-agent collaboration to different scenarios. Therefore, we introduce AutoAgents,
+    an innovative framework that adaptively generates and coordinates multiple specialized
+    agents to build an AI team according to different tasks. Specifically, AutoAgents
+    couples the relationship between tasks and roles by dynamically generating multiple
+    required agents based on task content and planning solutions for the current task
+    based on the generated expert agents. Multiple specialized agents collaborate
+    with each other to efficiently accomplish tasks. Concurrently, an observer role
+    is incorporated into the framework to reflect on the designated plans and agents''
+    responses and improve upon them. Our experiments on various benchmarks demonstrate
+    that AutoAgents generates more coherent and accurate solutions than the existing
+    multi-agent methods. This underscores the significance of assigning different
+    roles to different tasks and of team cooperation, offering new perspectives for
+    tackling complex tasks. The repository of this project is available at https://github.com/Link-AGI/AutoAgents. '
+  keywords: Applications
+  subcategory: Agent-based and Multi-agent Systems
+  title: 'AutoAgents: A Framework for Automatic Agent Generation'
+  url: https://doi.org/10.24963/ijcai.2024/3
+- abstract: Centralized Training with Decentralized Execution (CTDE) has emerged as
+    a widely adopted paradigm in multi-agent reinforcement learning, emphasizing the
+    utilization of global information for learning an enhanced joint Q-function or
+    centralized critic. In contrast, our investigation delves into harnessing global
+    information to directly enhance individual Q-functions or individual actors. Notably,
+    we discover that applying identical global information universally across all
+    agents proves insufficient for optimal performance. Consequently, we advocate
+    for the customization of global information tailored to each agent, creating agent-personalized
+    global information to bolster overall performance. Furthermore, we introduce a
+    novel paradigm named Personalized Training with Distilled Execution (PTDE), wherein
+    agent-personalized global information is distilled into the agent's local information.
+    This distilled information is then utilized during decentralized execution, resulting
+    in minimal performance degradation. PTDE can be seamless integrated with state-of-the-art
+    algorithms, leading to notable performance enhancements across diverse benchmarks,
+    including the SMAC benchmark, Google Research Football (GRF) benchmark, and Learning
+    to Rank (LTR) task.
+  keywords: Multi-agent learning, Coordination and cooperation
+  subcategory: Agent-based and Multi-agent Systems
+  title: 'PTDE: Personalized Training with Distilled Execution for Multi-Agent Reinforcement
+    Learning'
+  url: https://doi.org/10.24963/ijcai.2024/4
+- abstract: 'Deepfake model misuse poses major security concerns. Existing passive
+    and active Deepfake detection methods both suffer from a lack of generalizability
+    and robustness. In this study, we propose a pluggable and efficient active model
+    watermarking framework for Deepfake detection. This approach facilitates the embedding
+    of identification watermarks across a variety of Deepfake generation models, enabling
+    easy extraction by authorities for detection purposes. Specifically, our method
+    leverages the universal convolutional structure in generative model decoders.
+    It employs convolutional kernel sparsification for adaptive watermark embedding
+    positioning and introduces convolutional kernel normalization to seamlessly integrate
+    watermark parameters with those of the generative model. For watermark extraction,
+    we jointly train a watermark extractor based on a Deepfake detection model and
+    use BCH encoding to identify watermark images effectively. Finally, we apply our
+    approach to eight major types of Deepfake generation models. Experiments show
+    our method successfully detects Deepfakes with an average accuracy exceeding 94%
+    even in heavy lossy channels. This approach operates independently of the generation
+    model''s training without affecting the original model''s performance. Furthermore,
+    our model requires training a very limited number of parameters, and it is resilient
+    against three major adaptive attacks. The source code can be found at https://github.com/GuaiZao/Pluggable-Watermarking '
+  keywords: Trustworthy AI, Safety and robustness
+  subcategory: AI Ethics, Trust, Fairness
+  title: Pluggable Watermarking of Deepfake Models for Deepfake Detection
+  url: https://doi.org/10.24963/ijcai.2024/37
+- abstract: 'The emergence of AIGC has brought attention to the issue of generating
+    realistic deceptive content. While AIGC has the potential to revolutionize content
+    creation, it also facilitates criminal activities. Specifically, the manipulation
+    of speech has been exploited in tele-fraud and financial fraud schemes, posing
+    a significant threat to societal security. Current deep learning-based methods
+    for detecting forged speech extract mixed features from the original speech, which
+    often contain redundant information. Moreover, these methods fail to consider
+    the distinct characteristics of human voice-specific features and the diversity
+    of background environmental sounds. This paper introduces a framework called Discriminative
+    fEature dEcoupling enhanceMent (DEEM) for detecting speech forgery. Initially,
+    the framework decouples the original speech into human voice features and background
+    sound features. Subsequently, DEEM enhances voice-specific features through temporal
+    dimension aggregation and improves continuity-related features in the background
+    sound map via spectral-dimension aggregation. By employing the decoupling enhancement
+    features, extensive experiments demonstrate that DEEM achieves an accuracy improvement
+    of over 5% on FoR dataset compared to the state-of-the-art methods. '
+  keywords: Safety and robustness, AI and law, governance, regulation, Fairness and
+    diversity, Societal impact of AI
+  subcategory: AI Ethics, Trust, Fairness
+  title: Discriminative Feature Decoupling Enhancement for Speech Forgery Detection
+  url: https://doi.org/10.24963/ijcai.2024/38
+- abstract: "3D object detection plays an important role in autonomous driving; however,\
+    \ its vulnerability to backdoor attacks has become evident. By injecting \u201C\
+    triggers\u201D to poison the training dataset, backdoor attacks manipulate the\
+    \ detector's prediction for inputs containing these triggers. Existing backdoor\
+    \ attacks against 3D object detection primarily poison 3D LiDAR signals, where\
+    \ large-sized 3D triggers are injected to ensure their visibility within the sparse\
+    \ 3D space, rendering them easy to detect and impractical in real-world scenarios.\
+    \ In this paper, we delve into the robustness of 3D object detection, exploring\
+    \ a new backdoor attack surface through 2D cameras. Given the prevalent adoption\
+    \ of camera and LiDAR signal fusion for high-fidelity 3D perception, we investigate\
+    \ the latent potential of camera signals to disrupt the process. Although the\
+    \ dense nature of camera signals enables the use of nearly imperceptible small-sized\
+    \ triggers to mislead 2D object detection, realizing 2D-oriented backdoor attacks\
+    \ against 3D object detection is non-trivial. The primary challenge emerges from\
+    \ the fusion process that transforms camera signals into a 3D space, compromising\
+    \ the association with the 2D trigger to the target output. To tackle this issue,\
+    \ we propose an innovative 2D-oriented backdoor attack against LiDAR-camera fusion\
+    \ methods for 3D object detection, named BadFusion, for preserving trigger effectiveness\
+    \ throughout the entire fusion process. The evaluation demonstrates the effectiveness\
+    \ of BadFusion, achieving a significantly higher attack success rate compared\
+    \ to existing 2D-oriented attacks."
+  keywords: Safety and robustness, Trustworthy AI, Adversarial learning, adversarial
+    attack and defense methods, 3D computer vision
+  subcategory: AI Ethics, Trust, Fairness
+  title: 'BadFusion: 2D-Oriented Backdoor Attacks against 3D Object Detection'
+  url: https://doi.org/10.24963/ijcai.2024/39
+- abstract: This paper presents NgramMarkov, a variant of the Markov constraints.
+    It is dedicated to text generation in constraint programming (CP). It involves
+    a set of n-grams (i.e., sequence of n words) associated with probabilities given
+    by a large language model (LLM). It limits the product of the probabilities of
+    the n-gram of a sentence. The propagator of this constraint can be seen as an
+    extension of the ElementaryMarkov constraint propagator, incorporating the LLM
+    distribution instead of the maximum likelihood estimation of n-grams. It uses
+    a gliding threshold, i.e., it rejects n-grams whose local probabilities are too
+    low, to guarantee balanced solutions. It can also be combined with a "look-ahead"
+    approach to remove n-grams that are very unlikely to lead to acceptable sentences
+    for a fixed-length horizon. This idea is based on the MDDMarkovProcess constraint
+    propagator, but without explicitly using an MDD (Multi-Valued Decision Diagram).
+    The experimental results show that the generated text is valued in a similar way
+    to the LLM perplexity function. Using this new constraint dramatically reduces
+    the number of candidate sentences produced, improves computation times, and allows
+    larger corpora or smaller n-grams to be used. A real-world problem has been solved
+    for the first time using 4-grams instead of 5-grams.
+  keywords: Constraint programming, Applications, Modeling, Language generation
+  subcategory: Constraint Satisfaction and Optimization
+  title: Markov Constraint as Large Language Model Surrogate
+  url: https://doi.org/10.24963/ijcai.2024/204
+- abstract: This paper addresses the challenge of solution counting for Quantified
+    Boolean Formulas (QBFs), a task distinct from the well-established model counting
+    problem for SAT (\#SAT). Unlike SAT, where models are straightforward assignments
+    to Boolean variables, QBF solution counting involves tree models that capture
+    dependencies among variables within different quantifier blocks. We present a
+    comprehensive top-down tree model counter capable of handling diverse satisfiable
+    QBF formulas. Emphasizing the critical role of the branching heuristic, which
+    must consider variables in the correct order according to quantification blocks,
+    we further demonstrate the importance of addressing connected components, free
+    variables, and caching. Experimental results indicate that our proposed approach
+    for counting tree models of QBF formulas is highly efficient in practice, surpassing
+    existing state-of-the-art methods designed for this specific purpose
+  keywords: Satisfiabilty, Solvers and tools
+  subcategory: Constraint Satisfaction and Optimization
+  title: A Top-Down Tree Model Counter for Quantified Boolean Formulas
+  url: https://doi.org/10.24963/ijcai.2024/205
+- abstract: "Knowledge compilation has proven effective in (weighted) model counting,\
+    \ uniquely supporting incrementality and checkability. For incrementality, compiling\
+    \ an input formula once suffices to answer multiple queries, thus reducing the\
+    \ total solving effort. For checkability, the compiled formula is amenable to\
+    \ producing machine-checkable proofs for verification, thus strengthening the\
+    \ solver\u2019s reliability. In this work, we extend knowledge compilation from\
+    \ model counting to stochastic Boolean satisfiability (SSAT) solving by generalizing\
+    \ the dec-DNNF representation to accommodate the SSAT quantifier structure and\
+    \ integrate it into SharpSSAT, a state-of-the-art SSAT solver. We further study\
+    \ proof generation from the compiled representation and extend CPOG, a certified\
+    \ model-counting toolchain, to generate proofs for certifying the results of SharpSSAT.\
+    \ Experimental results show the benefits of the proposed knowledge compilation\
+    \ approach for SSAT in sharing computation efforts for multiple queries and producing\
+    \ checkable dec-DNNF logs with negligible overhead."
+  keywords: Satisfiabilty, Constraint satisfaction, Solvers and tools, Knowledge compilation
+  subcategory: Constraint Satisfaction and Optimization
+  title: Knowledge Compilation for Incremental and Checkable Stochastic Boolean Satisfiability
+  url: https://doi.org/10.24963/ijcai.2024/206
+- abstract: 'We introduce and study various models for satisfying electrical energy
+    demands of prosumers in a microgrid, while optimizing their costs. Each prosumer
+    has individual demands of electrical energy, which can vary day-by-day, and which
+    they can satisfy by either generating electrical energy through a self-operated
+    mini power plant like a solar panel, through buying from an external energy provider,
+    such as the main grid or by trading with other prosumers. Our models take into
+    account two key aspects motivated by real-life scenarios: first, we consider a
+    daily volatility of prices for buying and selling the energy, and second, the
+    possibility to store the self-generated energy in a battery of finite capacity
+    to be either self-consumed or sold to other prosumers in the future. We provide
+    a thorough complexity analysis, as well as efficient algorithms, so that prosumers
+    can minimize their overall cost over the entire time horizon. As a byproduct,
+    we also solve a new, generalized version of the KNAPSACK problem which may be
+    of independent interest. We complement our theoretical findings by extensive experimental
+    evaluations on realistic data sets.'
+  keywords: Constraint optimization problems, Planning algorithms, Planning under
+    uncertainty, Theoretical foundations of planning
+  subcategory: Constraint Satisfaction and Optimization
+  title: Efficient Cost-Minimization Schemes for Electrical Energy Demand Satisfaction
+    by Prosumers in Microgrids with Battery Storage Capabilities
+  url: https://doi.org/10.24963/ijcai.2024/207
+- abstract: 'Stock investment recommendation is crucial for guiding investment decisions
+    and managing portfolios. Recent studies have demonstrated the potential of temporal-relational
+    models (TRM) to yield excess investment returns. However, in the complicated finance
+    ecosystem, the current TRM suffer from both the intrinsic temporal bias from the
+    low signal-to-noise ratio (SNR) and the relational bias caused by utilizing inappropriate
+    relational topologies and propagation mechanisms. Moreover, the distribution shifts
+    behind macro-market scenarios invalidate the underlying i.i.d. assumption and
+    limit the generalization ability of TRM. In this paper, we pioneer the impact
+    of the above issues on the effective learning of temporal-relational patterns
+    and propose an Automatic De-Biased Temporal-Relational Model (ADB-TRM) for stock
+    recommendation. Specifically, ADB-TRM consists of three main components, i.e.,
+    (i) a meta-learned architecture forms a dual-stage training process, with the
+    inner part ameliorating temporal-relational bias and the outer meta-learner counteracting
+    distribution shifts, (ii) automatic adversarial sample generation guides the model
+    adaptively to alleviate bias and enhance its profiling ability through adversarial
+    training, and (iii) global-local interaction helps seek relative invariant stock
+    embeddings from local and global distribution perspectives to mitigate distribution
+    shifts. Experiments on three datasets from distinct stock markets show that ADB-TRM
+    excels state-of-the-arts over 28.41% and 9.53% in terms of cumulative and risk-adjusted
+    returns. '
+  keywords: Applications, Mining spatial and/or temporal data, Time series and data
+    streams
+  subcategory: Data Mining
+  title: Automatic De-Biased Temporal-Relational Modeling for Stock Investment Recommendation
+  url: https://doi.org/10.24963/ijcai.2024/221
+- abstract: 'Occupational skill demand (OSD) forecasting seeks to predict dynamic
+    skill demand specific to occupations, beneficial for employees and employers to
+    grasp occupational nature and maintain a competitive edge in the rapidly evolving
+    labor market. Although recent research has proposed data-driven techniques for
+    forecasting skill demand, the focus has remained predominantly on overall trends
+    rather than occupational granularity. In this paper, we propose a novel Pre-training
+    Enhanced Dynamic Graph Autoencoder (Pre-DyGAE), forecasting skill demand from
+    an occupational perspective. Specifically, we aggregate job descriptions (JDs)
+    by occupation and segment them into several timestamps. Subsequently, in the initial
+    timestamps, we pre-train a graph autoencoder (GAE), consisting of a semantically-aware
+    cross-attention enhanced uncertainty-aware encoder and decoders for link prediction
+    and edge regression to achieve graph reconstruction. In particular, we utilize
+    contrastive learning on skill cooccurrence clusters to solve the data sparsity
+    and a unified Tweedie and ranking loss for predicting the imbalanced distribution.
+    Afterward, we incorporate an adaptive temporal encoding unit and a temporal shift
+    module into GAE to achieve a dynamic GAE (DyGAE). Furthermore, we fine-tune the
+    DyGAE with a two-stage optimization strategy and infer future representations.
+    Extensive experiments on four real-world datasets validate the effectiveness of
+    Pre-DyGAE compared with state-of-the-art baselines. '
+  keywords: Applications, Mining spatial and/or temporal data
+  subcategory: Data Mining
+  title: 'Pre-DyGAE: Pre-training Enhanced Dynamic Graph Autoencoder for Occupational
+    Skill Demand Forecasting'
+  url: 'https://doi.org/10.24963/ijcai.2024/222 '
+- abstract: 'Multi-modality spatio-temporal (MoST) data extends spatio-temporal (ST)
+    data by incorporating multiple modalities, which is prevalent in monitoring systems,
+    encompassing diverse traffic demands and air quality assessments. Despite significant
+    strides in ST modeling in recent years, there remains a need to emphasize harnessing
+    the potential of information from different modalities. Robust MoST forecasting
+    is more challenging because it possesses (i) high-dimensional and complex internal
+    structures and (ii) dynamic heterogeneity caused by temporal, spatial, and modality
+    variations. In this study, we propose a novel MoST learning framework via Self-Supervised
+    Learning, namely MoSSL, which aims to uncover latent patterns from temporal, spatial,
+    and modality perspectives while quantifying dynamic heterogeneity. Experiment
+    results on two real-world MoST datasets verify the superiority of our approach
+    compared with the state-of-the-art baselines. Model implementation is available
+    at https://github.com/beginner-sketch/MoSSL. '
+  keywords: Mining spatial and/or temporal data, Qualitative, geometric, spatial,
+    and temporal reasoning, Time series and data streams
+  subcategory: Data Mining
+  title: Multi-Modality Spatio-Temporal Forecasting via Self-Supervised Learning
+  url: 'https://doi.org/10.24963/ijcai.2024/223 '
+- abstract: Viscous democracy is a generalization of liquid democracy, a social choice
+    framework in which voters may transitively delegate their votes. In viscous democracy,
+    a "viscosity" factor decreases the weight of a delegation the further it travels,
+    reducing the chance of excessive weight flowing between ideologically misaligned
+    voters. We demonstrate that viscous democracy often significantly improves the
+    quality of group decision-making over liquid democracy. We first show that finding
+    optimal delegations within a viscous setting is NP-hard. However, simulations
+    allow us to explore the practical effects of viscosity. Across social network
+    structures, competence distributions, and delegation mechanisms we find high viscosity
+    reduces the chance of ``super-voters'' attaining large amounts of weight and increases
+    the number of voters that are able to affect the outcome of elections. This, in
+    turn, improves group accuracy as a whole. As a result, we argue that viscosity
+    should be considered a core component of liquid democracy.
+  keywords: Computational social choice, Agent-based simulation and emergence , Web
+    and social networks
+  subcategory: Game Theory and Economic Paradigms
+  title: Optimizing Viscous Democracy
+  url: 'https://doi.org/10.24963/ijcai.2024/292 '
+- abstract: 'In this paper, we investigate the Mechanism Design aspects of the m-Capacitated
+    Facility Location Problem (m-CFLP) on a line. We focus on two frameworks. In the
+    first framework, the number of facilities is arbitrary, all facilities have the
+    same capacity, and the number of agents is equal to the total capacity of all
+    facilities. In the second framework, we aim to place two facilities, each with
+    a capacity of at least half of the total agents. For both of these frameworks,
+    we propose truthful mechanisms with bounded approximation ratios with respect
+    to the Social Cost (SC) and the Maximum Cost (MC). When m>2, the result sharply
+    contrasts with the impossibility results known for the classic m-Facility Location
+    Problem, where capacity constraints are not considered. Furthermore, all our mechanisms
+    are optimal with respect to the MC and optimal or nearly optimal with respect
+    to the SC among anonymous mechanisms. For both frameworks, we provide a lower
+    bound on the approximation ratio that any truthful and deterministic mechanism
+    can achieve with respect to the SC and MC. '
+  keywords: Mechanism design, Agent theories and models, Coordination and cooperation,
+    Resource allocation
+  subcategory: Game Theory and Economic Paradigms
+  title: 'Facility Location Problems with Capacity Constraints: Two Facilities and
+    Beyond'
+  url: https://doi.org/10.24963/ijcai.2024/293
+- abstract: 'Screen user interfaces (UIs) and infographics, sharing similar visual
+    language and design principles, play important roles in human communication and
+    human-machine interaction. We introduce ScreenAI, a vision-language model that
+    specializes in UI and infographics understanding. Our model improves upon the
+    PaLI architecture with the flexible patching strategy of pix2struct and is trained
+    on a unique mixture of datasets. At the heart of this mixture is a novel screen
+    annotation task in which the model has to identify the type and location of UI
+    elements. We use these text annotations to describe screens to Large Language
+    Models and automatically generate question-answering (QA), UI navigation, and
+    summarization training datasets at scale. We run ablation studies to demonstrate
+    the impact of these design choices. At only 5B parameters, ScreenAI achieves new
+    state-of-the-art results on UI- and infographics-based tasks (Multipage DocVQA,
+    WebSRC, and MoTIF), and new best-in-class performance on others (ChartQA, DocVQA,
+    and InfographicVQA) compared to models of similar size. Finally, we release three
+    new datasets: one focused on the screen annotation task and two others focused
+    on question answering.'
+  keywords: Human-computer interaction, Vision, language and reasoning, Multi-modal
+    learning, Multi-task and transfer learning
+  subcategory: Humans and AI
+  title: 'ScreenAI: A Vision-Language Model for UI and Infographics Understanding'
+  url: 'https://doi.org/10.24963/ijcai.2024/339 '
+- abstract: 'Emotion recognition based on multimodal physiological signals is attracting
+    more and more attention. However, how to deal with the consistency and heterogeneity
+    of multimodal physiological signals, as well as individual differences across
+    subjects, pose two significant challenges. In this paper, we propose a Multi-level
+    Disentangling Network named MDNet for cross-subject emotion recognition based
+    on multimodal physiological signals. Specifically, MDNet consists of a modality-level
+    disentangling module and a subject-level disentangling module. The modality-level
+    disentangling module projects multimodal physiological signals into modality-invariant
+    subspace and modality-specific subspace, capturing modality-invariant features
+    and modality-specific features. The subject-level disentangling module separates
+    subject-shared features and subject-private features among different subjects
+    from multimodal data, which facilitates cross-subject emotion recognition. Experiments
+    on two multimodal emotion datasets demonstrate that MDNet outperforms other state-of-the-art
+    baselines. '
+  keywords: Applications, Multi-modal learning, Mining spatial and/or temporal data
+  subcategory: Humans and AI
+  title: Multi-level Disentangling Network for Cross-Subject Emotion Recognition Based
+    on Multimodal Physiological Signals
+  url: 'https://doi.org/10.24963/ijcai.2024/340 '
+- abstract: 'Deep learning-based predictive models, leveraging Electronic Health Records
+    (EHR), are receiving increasing attention in healthcare. An effective representation
+    of a patient''s EHR should hierarchically encompass both the temporal relationships
+    between historical visits and medical events, and the inherent structural information
+    within these elements. Existing patient representation methods can be roughly
+    categorized into sequential representation and graphical representation. The sequential
+    representation methods focus only on the temporal relationships among longitudinal
+    visits. On the other hand, the graphical representation approaches, while adept
+    at extracting the graph-structured relationships between various medical events,
+    fall short in effectively integrate temporal information. To capture both types
+    of information, we model a patient''s EHR as a novel temporal heterogeneous graph.
+    This graph includes historical visits nodes and medical events nodes. It propagates
+    structured information from medical event nodes to visit nodes and utilizes time-aware
+    visit nodes to capture changes in the patient''s health status. Furthermore, we
+    introduce a novel temporal graph transformer (TRANS) that integrates temporal
+    edge features, global positional encoding, and local structural encoding into
+    heterogeneous graph convolution, capturing both temporal and structural information.
+    We validate the effectiveness of TRANS through extensive experiments on three
+    real-world datasets. The results show that our proposed approach achieves state-of-the-art
+    performance. '
+  keywords: Health and medicine, Applications
+  subcategory: Multidisciplinary Topics and Applications
+  title: Predictive Modeling with Temporal Graphical Representation on Electronic
+    Health Records
+  url: https://doi.org/10.24963/ijcai.2024/637
+- abstract: 'On-device intelligence for weather forecasting uses local deep learning
+    models to analyze weather patterns without centralized cloud computing, holds
+    significance for supporting human activates. Federated Learning is a promising
+    solution for such forecasting by enabling collaborative model training without
+    sharing raw data. However, it faces three main challenges that hinder its reliability:
+    (1) data heterogeneity among devices due to geographic differences; (2) data homogeneity
+    within individual devices and (3) communication overload from sending large model
+    parameters for collaboration. To address these challenges, this paper propose
+    Federated Prompt learning for Weather Foundation Models on Devices (FedPoD), which
+    enables devices to obtain highly customized models while maintaining communication
+    efficiency. Concretely, our Adaptive Prompt Tuning leverages lightweight prompts
+    guide frozen foundation model to generate more precise predictions, also conducts
+    prompt-based multi-level communication to encourage multi-source knowledge fusion
+    and regulate optimization. Additionally, Dynamic Graph Modeling constructs graphs
+    from prompts, prioritizing collaborative training among devices with similar data
+    distributions to against heterogeneity. Extensive experiments demonstrates FedPoD
+    leads the performance among state-of-the-art baselines across various setting
+    in real-world on-device weather forecasting datasets.'
+  keywords: Energy, environment and sustainability, Applications, Federated learning,
+    Mining heterogenous data
+  subcategory: Multidisciplinary Topics and Applications
+  title: Federated Prompt Learning for Weather Foundation Models on Devices
+  url: 'https://doi.org/10.24963/ijcai.2024/638 '
+- abstract: Partially observable Markov decision processes (POMDPs) rely on the key
+    assumption that probability distributions are precisely known. Robust POMDPs (RPOMDPs)
+    alleviate this concern by defining imprecise probabilities, referred to as uncertainty
+    sets. While robust MDPs have been studied extensively, work on RPOMDPs is limited
+    and primarily focuses on algorithmic solution methods. We expand the theoretical
+    understanding of RPOMDPs by showing that 1) different assumptions on the uncertainty
+    sets affect optimal policies and values; 2) RPOMDPs have a partially observable
+    stochastic game (POSG) semantic; and 3) the same RPOMDP with different assumptions
+    leads to semantically different POSGs and, thus, different policies and values.
+    These novel semantics for RPOMDPs give access to results for POSGs, studied in
+    game theory; concretely, we show the existence of a Nash equilibrium. Finally,
+    we classify the existing RPOMDP literature using our semantics, clarifying under
+    which uncertainty assumptions these existing works operate.
+  keywords: POMDPs, Formal verification, validation and synthesis, Sequential decision
+    making
+  subcategory: Planning and Scheduling
+  title: 'Imprecise Probabilities Meet Partial Observability: Game Semantics for Robust
+    POMDPs'
+  url: 'https://doi.org/10.24963/ijcai.2024/740 '
+- abstract: Markov decision processes (MDPs) provide a standard framework for sequential
+    decision making under uncertainty. However, MDPs do not take uncertainty in transition
+    probabilities into account. Robust Markov decision processes (RMDPs) address this
+    shortcoming of MDPs by assigning to each transition an uncertainty set rather
+    than a single probability value. In this work, we consider polytopic RMDPs in
+    which all uncertainty sets are polytopes and study the problem of solving long-run
+    average reward polytopic RMDPs. We present a novel perspective on this problem
+    and show that it can be reduced to solving long-run average reward turn-based
+    stochastic games with finite state and action spaces. This reduction allows us
+    to derive several important consequences that were hitherto not known to hold
+    for polytopic RMDPs. First, we derive new computational complexity bounds for
+    solving long-run average reward polytopic RMDPs, showing for the first time that
+    the threshold decision problem for them is in NP and coNP and that they admit
+    a randomized algorithm with sub-exponential expected runtime. Second, we present
+    Robust Polytopic Policy Iteration (RPPI), a novel policy iteration algorithm for
+    solving long-run average reward polytopic RMDPs. Our experimental evaluation shows
+    that RPPI is much more efficient in solving long-run average reward polytopic
+    RMDPs compared to state-of-the-art methods based on value iteration.
+  keywords: Markov decisions processes, Formal verification, validation and synthesis,
+    Planning under uncertainty, Theoretical foundations of planning
+  subcategory: Planning and Scheduling
+  title: Solving Long-run Average Reward Robust MDPs via Stochastic Games
+  url: 'https://doi.org/10.24963/ijcai.2024/741 '
+- abstract: 'Runtime analysis, as a branch of the theory of AI, studies how the number
+    of iterations algorithms take before finding a solution (its runtime) depends
+    on the design of the algorithm and the problem structure. Drift analysis is a
+    state-of-the-art tool for estimating the runtime of randomised algorithms, such
+    as bandit and evolutionary algorithms. Drift refers roughly to the expected progress
+    towards the optimum per iteration. This paper considers the problem of deriving
+    concentration tail-bounds on the runtime of algorithms. It provides a novel drift
+    theorem that gives precise exponential tail-bounds given positive, weak, zero
+    and even negative drift. Previously, such exponential tail bounds were missing
+    in the case of weak, zero, or negative drift. Our drift theorem can be used to
+    prove a strong concentration of the runtime/regret of algorithms in AI. For example,
+    we prove that the regret of the RWAB bandit algorithm is highly concentrated,
+    while previous analyses only considered the expected regret. This means that the
+    algorithm obtains the optimum within a given time frame with high probability,
+    i.e. a form of algorithm reliability. Moreover, our theorem implies that the time
+    needed by the co-evolutionary algorithm RLS-PD to obtain a Nash equilibrium in
+    a Bilinear max-min-benchmark problem is highly concentrated. However, we also
+    prove that the algorithm forgets the Nash equilibrium, and the time until this
+    occurs is highly concentrated. This highlights a weakness in the RLS-PD which
+    should be addressed by future work. '
+  keywords: Evolutionary computation, Heuristic search, Other
+  subcategory: Search
+  title: Concentration Tail-Bound Analysis of Coevolutionary and Bandit Learning Algorithms
+  url: 'https://doi.org/10.24963/ijcai.2024/767 '
+- abstract: 'Existing neural heuristics often train a deep architecture from scratch
+    for each specific vehicle routing problem (VRP), ignoring the transferable knowledge
+    across different VRP variants. This paper proposes the cross-problem learning
+    to assist heuristics training for different downstream VRP variants. Particularly,
+    we modularize neural architectures for complex VRPs into 1) the backbone Transformer
+    for tackling the travelling salesman problem (TSP), and 2) the additional lightweight
+    modules for processing problem-specific features in complex VRPs. Accordingly,
+    we propose to pre-train the backbone Transformer for TSP, and then apply it in
+    the process of fine-tuning the Transformer models for each target VRP variant.
+    On the one hand, we fully fine-tune the trained backbone Transformer and problem-specific
+    modules simultaneously. On the other hand, we only fine-tune small adapter networks
+    along with the modules, keeping the backbone Transformer still. Extensive experiments
+    on typical VRPs substantiate that 1) the full fine-tuning achieves significantly
+    better performance than the one trained from scratch, and 2) the adapter-based
+    fine-tuning also delivers comparable performance while being notably parameter-efficient.
+    Furthermore, we empirically demonstrate the favorable effect of our method in
+    terms of cross-distribution application and versatility. '
+  keywords: Search and machine learning, Applications, Combinatorial search and optimisation
+  subcategory: Search
+  title: Cross-Problem Learning for Solving Vehicle Routing Problems
+  url: https://doi.org/10.24963/ijcai.2024/769

@@ -1,0 +1,548 @@
+papers:
+- abstract: We present a new additive image factorization technique that treats images
+    to be composed of multiple latent specular components which can be simply estimated
+    recursively by modulating the sparsity during decomposition. Our model-driven
+    RSFNet estimates these factors by unrolling the optimization into network layers
+    requiring only a few scalars to be learned. The resultant factors are interpretable
+    by design and can be fused for different image enhancement tasks via a network
+    or combined directly by the user in a controllable fashion. Based on RSFNet, we
+    detail a zero-reference Low Light Enhancement (LLE) application trained without
+    paired or unpaired supervision. Our system improves the state-of-the-art performance
+    on standard benchmarks and achieves better generalization on multiple other datasets.
+    We also integrate our factors with other task specific fusion networks for applications
+    like deraining, deblurring and dehazlng with negligible overhead thereby highlighting
+    the multi-domain and multi-task generalizability of our proposed RSFNet. The code
+    and data is released for reproducibility on the project homepage11https://sophont01.github.io/data/projects/RSFNet/.
+  keywords: Ethics, Computer, vision, Neural, networks, Estimation, Multitasking,
+    Reproducibility, of, results, Pattern, recognition, Sparsity, Network, Layer,
+    Low, Light, Fusion, Network, Deblurring, Specular, Component, Multiple, Factors,
+    Step, Size, Denoising, Image, Regions, Annotation, Data, Learnable, Parameters,
+    Peak, Signal-to-noise, Ratio, Model-based, Methods, Downstream, Applications,
+    Direct, Light, Loss, Term, Multiple, Benchmarks, Dark, Shadows, Data-driven, Solutions,
+    Low-light, Image, Data-driven, Fashion, Indirect, Light, Low, light, enhancement,
+    image, decomposition, specularity, estimation, model-driven, unrolling, deraining,
+    dehazing, deblurring, zero-reference
+  title: Specularity Factorization for Low-Light Enhancement
+  url: https://doi.org/10.1109/CVPR52733.2024.00009
+- abstract: Image enhancement holds extensive applications in real-world scenarios
+    due to complex environments and limitations of imaging devices. Conventional methods
+    are often constrained by their tailored models, resulting in diminished robustness
+    when confronted with challenging degradation conditions. In response, we propose
+    FlowIE, a simple yet highly effective flow-based image enhancement framework that
+    estimates straight-line paths from an elementary distribution to high-quality
+    images. Unlike previous diffusion-based methods that suffer from long-time inference,
+    FlowIE constructs a linear many-to-one transport mapping via conditioned rectified
+    flow. The rectification straightens the trajectories of probability transfer,
+    accelerating inference by an order of magnitude. This design enables our FlowIE
+    to fully exploit rich knowledge in the pretrained diffusion model, rendering it
+    well-suited for various real-world applications. Moreover, we devise a faster
+    inference algorithm, inspired by Lagrange's Mean Value Theorem, harnessing midpoint
+    tangent direction to optimize path estimation, ultimately yielding visually superior
+    results. Thanks to these designs, our FlowIE adeptly manages a diverse range of
+    enhancement tasks within a concise sequence of fewer than 5 steps. Our contributions
+    are rigorously validated through comprehensive experiments on synthetic and real-world
+    datasets, unveiling the compelling efficacy and efficiency of our proposed FlowIE.
+    Code is available at https://github.com/EternalEvan/FlowIE.
+  keywords: Degradation, Estimation, Imaging, Diffusion models, Rendering (computer
+    graphics), Robustness, Inference algorithms, Image Enhancement, Efficient Image
+    Enhancement, Diffusion Model, High-quality Images, Real-world Datasets, Mean Value
+    Theorem, Fast Inference, Path Estimates, Straight-line Path, Image Quality, Denoising,
+    Specific Tasks, Real-world Data, Ordinary Differential Equations, Generative Adversarial
+    Networks, Latent Space, Stochastic Differential Equations, Image Synthesis, Straight
+    Path, Real-world Images, Hair Texture, GAN-based Methods, Forward Euler Method,
+    Inpainting, Low-quality Images, Color Enhancement, Prior Imaging, Blur Kernel,
+    Efficient Inference, Face Images, image enhancement, rectified flow
+  title: 'FlowIE: Efficient Image Enhancement via Rectified Flow'
+  url: https://doi.org/10.1109/CVPR52733.2024.00010
+- abstract: Event camera has recently received much attention for low-light image
+    enhancement (LIE) thanks to their distinct advantages, such as high dynamic range.
+    However, current research is prohibitively restricted by the lack of large-scale,
+    real-world, and spatial-temporally aligned event-image datasets. To this end,
+    we propose a real-world (indoor and outdoor) dataset comprising over 30K pairs
+    of images and events under both low and normal illumination conditions. To achieve
+    this, we utilize a robotic arm that traces a consistent non-linear trajectory
+    to curate the dataset with spatial alignment precision under 0.03mm. We then introduce
+    a matching alignment strategy, rendering 90% of our dataset with errors less than
+    0.01s. Based on the dataset, we propose a novel event-guided LIE approach, called
+    EvLight, towards robust performance in real-world low-light scenes. Specifically,
+    we first design the multiscale holistic fusion branch to extract holistic structural
+    and textural information from both events and images. To ensure robustness against
+    variations in the regional illumination and noise, we then introduce a Signal-to-Noise-Ratio
+    (SNR)-guided regional feature selection to selectively fuse features of images
+    from regions with high SNR and enhance those with low SNR by extracting regional
+    structure information from events. Extensive experiments on our dataset and the
+    synthetic SDSD dataset demonstrate our EvLight significantly surpasses the frame-based
+    methods, e.g., [4] by 1.14 dB and 2.62 dB, respectively.
+  keywords: Fuses, Robot vision systems, Urban areas, Lighting, Feature extraction,
+    Cameras, Trajectory, Real-world Datasets, Low-light Image, Low-light Image Enhancement,
+    Structural Information, Image Features, Regional Characteristics, Image Pairs,
+    Robotic Arm, High Signal-to-noise Ratio, Low Signal-to-noise Ratio, High Dynamic
+    Range, Pairs Of Events, Matching Strategy, Real-world Scenes, Spatial Alignment,
+    Dynamic Vision Sensor, Time Interval, Low Light, Sequence Pairs, RGB Images, Fusion
+    Block, Temporal Alignment, Normal Light Conditions, Color Distortion, Event Stream,
+    Element-wise Product, Nonlinear Motion, Higher Signal-to-noise Ratio Values, Signal-to-noise
+    Ratio Values, Line Approach, Event camera, Low-light image enhancement
+  title: 'Towards Robust Event-guided Low-Light Image Enhancement: A Large-Scale Real-World
+    Event-Image Dataset and Novel Approach'
+  url: https://doi.org/10.1109/CVPR52733.2024.00011
+- abstract: Recent advancements in domain generalization (DG) for face anti-spoofing
+    (FAS) have garnered considerable attention. Traditional methods have focused on
+    designing learning objectives and additional modules to isolate domain-specific
+    features while retaining domain-invariant characteristics in their representations.
+    However, such approaches often lack guarantees of consistent maintenance of domain-invariant
+    features or the complete removal of domain-specific features. Furthermore, most
+    prior works of DG for FAS do not ensure convergence to a local flat minimum, which
+    has been shown to be advantageous for DG. In this paper, we introduce GAC-FAS,
+    a novel learning objective that encourages the model to converge towards an optimal
+    flat minimum without necessitating additional learning modules. Unlike conventional
+    sharpness-aware minimizers, GAC-FAS identifies ascending points for each domain
+    and regulates the generalization gradient updates at these points to align coherently
+    with empirical risk minimization (ERM) gradient updates. This unique approach
+    specifically guides the model to be robust against domain shifts. We demonstrate
+    the efficacy of GAC-FAS through rigorous testing on challenging cross-domain FAS
+    datasets, where it es-tablishes state-of-the-art performance.
+  keywords: Training, Computer vision, Risk minimization, Face recognition, Robustness,
+    Regulation, Maintenance, Gradient Alignment, Face Anti-spoofing, Domain Shift,
+    Domain Generalization, Points In Domain, Empirical Risk, Gradient Update, Domain-invariant
+    Features, General Gradient, Empirical Risk Minimization, Domain-specific Features,
+    Neural Network, Hyperparameters, False Positive Rate, Benchmark Datasets, Taylor
+    Expansion, Generalization Capability, Training Objective, Source Domain, Label
+    Noise, Unseen Domains, Empirical Loss, Convergence Performance, face anti-spoofing,
+    domain generalization
+  title: Gradient Alignment for Cross-Domain Face Anti-Spoofing
+  url: https://doi.org/10.1109/CVPR52733.2024.00026
+- abstract: Gait recognition stands as one of the most pivotal remote identification
+    technologies and progressively expands across research and industry communities.
+    However, existing gait recognition methods heavily rely on task-specific upstream
+    driven by supervised learning to provide explicit gait representations like silhouette
+    sequences, which in-evitably introduce expensive annotation costs and poten-tial
+    error accumulation. Escaping from this trend, this work explores effective gait
+    representations based on the all-purpose knowledge produced by task-agnostic Large
+    Vision Models (LVMs) and proposes a simple yet efficient gait framework, termed
+    B igGait. Specifically, the Gait Repre-sentation Extractor (GRE) within BigGait
+    draws upon design principles from established gait representations, effectively
+    transforming all-purpose knowledge into implicit gait representations without
+    requiring third-party supervision signals. Experiments on CCPG, CAISA-B* and SUSTechlK
+    indicate that BigGait significantly outperforms the previous methods in both within-domain
+    and cross-domain tasks in most cases, and provides a more practical paradigm for
+    learning the next-generation gait representation. Fi-nally, we delve into prospective
+    challenges and promising directions in LVMs-based gait recognition, aiming to
+    in-spire future work in this emerging topic. The source code is available at https://github.com/ShiqiYu/OpenGait.
+  keywords: Industries, Computer vision, Costs, Annotations, Source coding, Supervised
+    learning, Market research, Gait Representation, Supervised Learning, Convolutional
+    Neural Network, Feature Maps, Texture Features, Maximum Entropy, Softmax Function,
+    Channel Dimension, Graph Convolutional Network, Metric Learning, Intermediate
+    Representation, Soft Constraints, Gait Characteristics, Central Modulation, Smoothness
+    Loss, SOTA Methods, RGB Video, Large Vision Models, Gait Recognition, Person Re-Identification
+  title: 'BigGait: Learning Gait Representation You Want by Large Vision Models'
+  url: https://doi.org/10.1109/CVPR52733.2024.00027
+- abstract: Face Anti-Spoofing (FAS) is crucial for securing face recognition systems
+    against presentation attacks. With ad-vancements in sensor manufacture and multi-modal
+    learning techniques, many multi-modal FAS approaches have emerged. However, they
+    face challenges in generalizing to unseen attacks and deployment conditions. These
+    chal-lenges arise from (1) modality unreliability, where some modality sensors
+    like depth and infrared undergo signifi-cant domain shifts in varying environments,
+    leading to the spread of unreliable information during cross-modal feature fusion,
+    and (2) modality imbalance, where training overly relies on a dominant modality
+    hinders the conver-gence of others, reducing effectiveness against attack types
+    that are indistinguishable by sorely using the dominant modality. To address modality
+    unreliability, we propose the Uncertainty-Guided Cross-Adapter (U-Adapter) to
+    recognize unreliably detected regions within each modality and suppress the impact
+    of unreliable regions on other modal-ities. For modality imbalance, we propose
+    a Rebalanced Modality Gradient Modulation (ReGrad) strategy to rebal-ance the
+    convergence speed of all modalities by adaptively adjusting their gradients. Besides,
+    we provide the first large-scale benchmark for evaluating multi-modal FAS per-formance
+    under domain generalization scenarios. Exten-sive experiments demonstrate that
+    our method outperforms state-of-the-art methods. Source codes and protocols are
+    released on https://github.com/OMGGGGG/mmdg.
+  keywords: Training, Computer vision, Protocols, Face recognition, Source coding,
+    Modulation, Benchmark testing, Face Anti-spoofing, Imbalance, Benchmark, Convergence
+    Rate, Face Recognition, Domain Shift, Dominant Mode, Feature Fusion, Types Of
+    Attacks, Domain Generalization, Multimodal Learning, Deep Learning, Posterior
+    Probability, Feature Space, Uncertainty Estimation, Slow Speed, Multilayer Perceptron,
+    Vanilla, Target Domain, Source Domain, Vision Transformer, Unseen Environments,
+    Multi-head Self-attention, Multimodal Dataset, Bayesian Neural Network, Late Fusion,
+    Multimodal Methods, Fusion Network, Degree Of Balance, Unseen Domains, Face anti-spoofing,
+    uncertainty, modality imbalance, multi-modal learning, domain generalization
+  title: 'Suppress and Rebalance: Towards Generalized Multi-Modal Face Anti-Spoofing'
+  url: https://doi.org/10.1109/CVPR52733.2024.00028
+- abstract: Reconstructing the viewed images from human brain activity bridges human
+    and computer vision through the Brain-Computer Interface. The inherent variability
+    in brain function between individuals leads existing literature to focus on acquiring
+    separate models for each individual using their respective brain signal data,
+    ignoring commonalities between these data. In this article, we devise Psychometry,
+    an omnifit model for reconstructing images from functional Magnetic Resonance
+    Imaging (fMRI) obtained from different subjects. Psychometry incorporates an omni
+    mixture-of-experts (Omni MoE) module where all the experts work together to capture
+    the inter-subject commonalities, while each expert associated with subject-specific
+    parameters copes with the individual differences. Moreover, Psychometry is equipped
+    with a retrieval-enhanced inference strategy, termed Ecphory, which aims to enhance
+    the learned fMRI representation via retrieving from prestored subject-specific
+    memories. These designs collectively render Psychometry omnifit and efficient,
+    enabling it to capture both inter-subject commonality and individual specificity
+    across subjects. As a result, the enhanced fMRI representations serve as conditional
+    signals to guide a generation model to reconstruct high-quality and realistic
+    images, establishing Psychometry as state-of-the-art in terms of both high-level
+    and low-level metrics.
+  keywords: Measurement, Bridges, Computer vision, Computational modeling, Functional
+    magnetic resonance imaging, Brain modeling, Data models, Brain Activity, Image
+    Reconstruction, Human Brain Activity, Individual Differences, Computer Vision,
+    Realistic Images, Inference Scheme, Subject-specific Parameters, Semantic, Individual
+    Variables, Visual Stimuli, Data Subject, Individual Subjects, fMRI Data, Generative
+    Adversarial Networks, Diffusion Model, Topic Modeling, Multi-task Learning, Trained
+    Subjects, Self-supervised Learning, Transformer Block, Relevant Images, Number
+    Of Experts, Detailed Network Architecture, Drawing Inspiration, Convex Combination,
+    Memory Retrieval Processes, fMRI, Human Brain Activity, Image Reconstruction,
+    Diffusion Model
+  title: 'Psychometry: An Omnifit Model for Image Reconstruction from Human Brain
+    Activity'
+  url: https://doi.org/10.1109/CVPR52733.2024.00030
+- abstract: In this paper, we address the challenge of making ViT models more robust
+    to unseen affine transformations. Such robustness becomes useful in various recognition
+    tasks such as face recognition when image alignment failures occur. We propose
+    a novel method called KP-RPE, which leverages key points (e.g. facial landmarks)
+    to make ViT more resilient to scale, translation, and pose variations. We begin
+    with the observation that Relative Position Encoding (RPE) is a good way to bring
+    affine transform generalization to ViTs. RPE, however, can only inject the model
+    with prior knowledge that nearby pixels are more important than far pixels. Keypoint
+    RPE (KP-RPE) is an extension of this principle, where the significance of pixels
+    is not solely dictated by their proximity but also by their relative positions
+    to specific keypoints within the image. By anchoring the significance of pixels
+    around keypoints, the model can more effectively retain spatial relationships,
+    even when those relationships are disrupted by affine transformations. We show
+    the merit of KP-RPE inface and gait recognition. The experimental results demonstrate
+    the effectiveness in improving face recognition performance from low-quality images,
+    particularly where alignment is prone to failure. Code and pre-trained models
+    are available.
+  keywords: Computer vision, Image recognition, Face recognition, Computational modeling,
+    Transforms, Throughput, Robustness, Face Recognition, Positional Encoding, Relative
+    Position Encoding, Recognition Task, Recognition Performance, Affine Transformation,
+    Low-quality Images, Vision Transformer, Face Recognition Performance, Training
+    Dataset, Relative Position, Weight Decay, Vision Tasks, Recognition Model, High-quality
+    Dataset, Absolute Position, Attention Weights, Face Detection, Self-attention
+    Mechanism, Natural Language Processing Tasks, Aligned Dataset, Landmark Detection,
+    Input Tokens, Face Recognition Model, Keypoint Detection, Absolute Coordinates,
+    Face Dataset, Toy Example, Face Recognition, Relative Position Encoding, Keypoints,
+    Facial Landmarks, Gait Recognition, Affine Transformation, Recognition
+  title: KeyPoint Relative Position Encoding for Face Recognition
+  url: https://doi.org/10.1109/CVPR52733.2024.00031
+- abstract: 'In this work, we study a novel problem which focuses on person identification
+    while performing daily activities. Learning biometric features from RGB videos
+    is challenging due to spatio-temporal complexity and presence of ap-pearance biases
+    such as clothing color and background. We propose ABNet, a novel framework which
+    leverages dis-entanglement of biometric and non-biometric features to perform
+    effective person identification from daily activities. ABNet relies on a bias-less
+    teacher to learn biometric features from RGB videos and explicitly disentangle
+    non-biometric features with the help of biometric distortion. In addition, ABNet
+    also exploits activity prior for biometrics which is enabled by joint biometric
+    and activity learning. We perform comprehensive evaluation of the proposed approach
+    across five different datasets which are derived from existing activity recognition
+    benchmarks. Furthermore, we extensively compare ABNet with existing works in person
+    identification and demonstrate its effectiveness for activity-based biometrics
+    across all five datasets. The code and dataset can be accessed at: https: //github.com/
+    sacrcv/Activity-Biometrics/'
+  keywords: Biometrics, Computer vision, Accuracy, Biological system modeling, Benchmark
+    testing, Activity recognition, Distortion, Daily Activities, Biometric, Action
+    Recognition, Biometric Characteristics, RGB Video, Feature Learning, Real-world
+    Scenarios, Capability Of Model, Feature Clustering, Evaluation Protocol, Activity
+    Classification, Appearance Features, Teacher Network, Walking Pattern, Image-based
+    Methods, Triplet Loss, Image-based Approach, Euclidean Distance Function, Distillation
+    Loss, Single Viewpoint, Video Encoding, Action Recognition Datasets, biometrics,
+    daily activities, person identification
+  title: 'Activity-Biometrics: Person Identification from Daily Activities'
+  url: https://doi.org/10.1109/CVPR52733.2024.00035
+- abstract: "Self-supervised landmark estimation is a challenging task that demands\
+    \ the formation of locally distinct feature representations to identify sparse\
+    \ facial landmarks in the absence of annotated data. To tackle this task, existing\
+    \ state-of-the-art (SOTA) methods (1) extract coarse features from backbones that\
+    \ are trained with instance-level self-supervised learning (SSL) paradigms, which\
+    \ neglect the dense prediction nature of the task, (2) aggregate them into memory-intensive\
+    \ hypercolumn formations, and (3) su-pervise lightweight projector networks to\
+    \ na\xEF vely establish full local correspondences among all pairs of spatial\
+    \ features. In this paper, we introduce SCE-MAE, a framework that (1) leverages\
+    \ the MAE [14], a region-level SSL method that naturally better suits the landmark\
+    \ prediction task, (2) operates on the vanilla feature map instead of on expen-sive\
+    \ hypercolumns, and (3) employs a Correspondence Ap-proximation and Refinement\
+    \ Block (CARB) that utilizes a simple density peak clustering algorithm and our\
+    \ proposed Locality-Constrained Repellence Loss to directly hone only select local\
+    \ correspondences. We demonstrate through extensive experiments that SCE-MAE is\
+    \ highly effective and robust, outperforming existing SOTA methods by large mar-gins\
+    \ of ~20%-44% on the landmark matching and ~9%-15% on the landmark detection tasks."
+  keywords: Computer vision, Systematics, Face recognition, Aggregates, Estimation,
+    Clustering algorithms, Self-supervised learning, Selective Enhancement, Landmark
+    Estimation, Masked Autoencoder, Clustering Algorithm, Feature Maps, Feature Representation,
+    Projector, Detection Task, Self-supervised Learning, Distinct Representations,
+    Landmark Detection, Self-supervised Learning Methods, Semantic, Hyperparameters,
+    Forehead, Cluster Centers, Disambiguation, Patch Size, Evaluation Protocol, Pretext
+    Task, Matching Task, Masked Images, Lip Corner, Human Faces, Annotated Samples,
+    Matching Performance, Linear Layer, self-supervised learning, face landmark detection,
+    face landmark matching, face landmark estimation, MAE
+  title: 'SCE-MAE: Selective Correspondence Enhancement with Masked Autoencoder for
+    Self-Supervised Landmark Estimation'
+  url: https://doi.org/10.1109/CVPR52733.2024.00131
+- abstract: We introduce a light steering technology that operates at megahertz frequencies,
+    has no moving parts, and costs less than a hundred dollars. Our technology can
+    benefit many projector and imaging systems that critically rely on high-speed,
+    reliable, low-cost, and wavelength-independent light steering, including laser
+    scanning projectors, LiDAR sensors, and fluorescence microscopes. Our technology
+    uses ultrasound waves to generate a spatiotemporally-varying refractive index
+    field inside a compressible medium, such as water, turning the medium into a dynamic
+    traveling lens. By controlling the electrical input of the ultrasound transducers
+    that generate the waves, we can change the lens, and thus steer light, at the
+    speed of sound (1.5 km/s in water). We build a physical prototype of this technology,
+    use it to realize different scanning techniques at megahertz rates (three orders
+    of magnitude faster than commercial alternatives such as galvo mirror scanners),
+    and demonstrate proof-of-concept projector and LiDAR applications. To encourage
+    further innovation towards this new technology, we derive theory for its fundamental
+    limits and develop a physically-accurate simulator for virtual design. Our technology
+    offers a promising solution for achieving high-speed and low-cost light steering
+    in a variety of applications.
+  keywords: Technological innovation, Ultrasonic imaging, Laser radar, Transducers,
+    Turning, Sensor systems, Spatiotemporal phenomena, Light Steering, Imaging System,
+    Refractive Index, Speed Of Sound, Scanning Technique, LiDAR Scans, Illumination,
+    Spatial Resolution, Laser Pulse, Point Spread Function, Phase Modulation, Arbitrary
+    Point, Laser Frequency, Raster Scan, Experimental Prototype, Light-sheet Microscopy,
+    Uncertainty Principle, Cylindrical Lens, Ultrasound Frequency, Single-photon Avalanche
+    Diode, Gradient Index Lens, Lens Aperture, Blur Kernel, Refractive Index Profile,
+    Wave Physics, Diffraction Limit, Bragg Diffraction, Field Of View, Sequence Of
+    Points, Computational imaging
+  title: Megahertz Light Steering Without Moving Parts
+  url: https://doi.org/10.1109/CVPR52729.2023.00009
+- abstract: Recent works such as BARF and GARF can bundle adjust camera poses with
+    neural radiance fields (NeRF) which is based on coordinate-MLPs. Despite the impressive
+    results, these methods cannot be applied to Generalizable NeRFs (GeNeRFs) which
+    require image feature extractions that are often based on more complicated 3D
+    CNN or transformer architectures. In this work, we first analyze the difficulties
+    of jointly optimizing camera poses with GeNeRFs, and then further propose our
+    DBARF to tackle these issues. Our DBARF which bundle adjusts camera poses by taking
+    a cost feature map as an implicit cost function can be jointly trained with GeNeRFs
+    in a self-supervised manner. Unlike BARF and its follow-up works, which can only
+    be applied to per-scene optimized NeRFs and need accurate initial camera poses
+    with the exception of forward-facing scenes, our method can generalize across
+    scenes and does not require any good initialization. Experiments show the effectiveness
+    and generalization ability of our DBARF when evaluated on real-world datasets.
+    Our code is available at https://aibluefisher.github.io/DBARF.
+  keywords: Computer vision, Three-dimensional displays, Costs, Codes, Computer architecture,
+    Cameras, Transformers, Neural Radiance Fields, Transformer, Image Features, Cost
+    Function, Feature Maps, Joint Optimization, Follow-up Work, Joint Training, Camera
+    Pose, Neural Network, Gradient Descent, Depth Map, Volume Density, Image Point,
+    3D Point, Current Iteration, Low-frequency Components, Feature Aggregation, Pixel
+    Color, Relative Pose, Scene Graph, View Synthesis, Bundle Adjustment, Target View,
+    Fake Images, Positional Encoding, Accurate Pose, Cost Volume, Scene Geometry,
+    Target Image, Image and video synthesis and generation
+  title: 'DBARF: Deep Bundle-Adjusting Generalizable Neural Radiance Fields'
+  url: https://doi.org/10.1109/CVPR52729.2023.00011
+- abstract: Dance is an important human art form, but creating new dances can be difficult
+    and time-consuming. In this work, we introduce Editable Dance GEneration (EDGE),
+    a state-of-the-art method for editable dance generation that is capable of creating
+    realistic, physically-plausible dances while remaining faithful to the input music.
+    EDGE uses a transformer-based diffusion model paired with Jukebox, a strong music
+    feature extractor, and confers powerful editing capabilities well-suited to dance,
+    including joint-wise conditioning, and in-betweening. We introduce a new metric
+    for physical plausibility, and evaluate dance quality generated by our method
+    extensively through (1) multiple quantitative metrics on physical plausibility,
+    beat alignment, and diversity benchmarks, and more importantly, (2) a large-scale
+    user study, demonstrating a significant improvement over previous state-of-the-art
+    methods. Qualitative samples from our model can be found at our website.
+  keywords: 'Measurement, Humanities, Computer vision, Art, Computational modeling,
+    Benchmark testing, Feature extraction, User Study, Diffusion Model, Quantitative
+    Metrics, Powerful Capability, Past Work, Motion Capture, Human Evaluation, Joint
+    Position, Human Motion, Temporal Constraints, Bone Length, Forward Process, Qualitative
+    Performance, Auxiliary Loss, Feature Extraction Strategy, Ground Truth Samples,
+    Humans: Face, body, pose, gesture, movement'
+  title: 'EDGE: Editable Dance Generation From Music'
+  url: https://doi.org/10.1109/CVPR52729.2023.00051
+- abstract: We present PersonNeRF, a method that takes a collection of photos of a
+    subject (e.g. Roger Federer) captured across multiple years with arbitrary body
+    poses and ap-pearances, and enables rendering the subject with arbitrary novel
+    combinations of viewpoint, body pose, and appearance. PersonNeRF builds a customized
+    neural volumetric 3D model of the subject that is able to render an entire space
+    spanned by camera viewpoint, body pose, and appearance. A central challenge in
+    this task is dealing with sparse observations; a given body pose is likely only
+    observed by a single viewpoint with a single appearance, and a given appearance
+    is only observed under a handful of different body poses. We address this issue
+    by recovering a canonical T-pose neural volumetric representation of the subject
+    that allows for changing appearance across different observations, but uses a
+    shared pose-dependent motion field across all observations. We demonstrate that
+    this approach, along with regularization of the recovered volumetric geometry
+    to encourage smoothness, is able to recover a model that renders compelling images
+    from novel combinations of viewpoint, pose, and appearance from these challenging
+    unstructured photo collections, outperforming prior work for free-viewpoint human
+    rendering.
+  keywords: "Geometry, Solid modeling, Computer vision, Three-dimensional displays,\
+    \ Computational modeling, Rendering (computer graphics), Cameras, Collection Of\
+    \ Photographs, Multiple Years, Neural Representations, Representative Subject,\
+    \ Motion Field, Sparse Observations, Arbitrary Combination, Body Pose, Camera\
+    \ Viewpoint, 3D Reconstruction, Single Network, 3D Scanning, Camera View, Embedding\
+    \ Vectors, Observation Space, Camera Pose, Volume Rendering, Fr\xE9chet Inception\
+    \ Distance, Body-worn Cameras, Non-rigid Motion, 3D from multi-view and sensors"
+  title: 'PersonNeRF : Personalized Reconstruction from Photo Collections'
+  url: https://doi.org/10.1109/CVPR52729.2023.00058
+- abstract: Mobile robots, including autonomous vehicles rely heavily on sensors that
+    use electromagnetic radiation like lidars, radars and cameras for perception.
+    While effective in most scenarios, these sensors can be unreliable in unfavorable
+    environmental conditions, including low-light scenarios and adverse weather, and
+    they can only detect obstacles within their direct line-of-sight. Audible sound
+    from other road users propagates as acoustic waves that carry information even
+    in challenging scenarios. However, their low spatial resolution and lack of directional
+    information have made them an overlooked sensing modality. In this work, we introduce
+    long-range acoustic beamforming of sound produced by road users in-the-wild as
+    a complementary sensing modality to traditional electromagnetic radiation-based
+    sensors. To validate our approach and encourage further work in the field, we
+    also introduce the first-ever multimodallong-range acoustic beamforming dataset.
+    We propose a neural aperture expansion method for beamforming and demonstrate
+    its effectiveness for multimodal automotive object detection when coupled with
+    RGB images in challenging automotive scenarios, where camera-only approaches fail
+    or are unable to provide ultra-fast acoustic sensing sampling rates. Data and
+    code can be found here 11light.princeton.edu/seeingwithsound.
+  keywords: Array signal processing, Roads, Robot vision systems, Cameras, Acoustics,
+    Sensors, Pattern recognition, Scene Understanding, Acoustic Beamforming, Low Resolution,
+    Object Detection, Acoustic Waves, RGB Images, Challenging Scenarios, Convolutional
+    Neural Network, Test Dataset, Global Positioning System, Visual Input, Supplementary
+    Materials For Details, Sound Pressure, Acoustic Signals, Inertial Measurement
+    Unit, Annotated Dataset, Sound Source, Sound Localization, Pressure Signals, RGB
+    Camera, Microphone Array, Multimodal Tasks, LiDAR Sensor, Future Frames, Acoustic
+    Sensors, Multimodal Dataset, Sensor Modalities, Background Noise, Sensor Configuration,
+    Vision Tasks, Autonomous driving
+  title: 'Seeing With Sound: Long-Range Acoustic Beamforming for Multimodal Scene
+    Understanding'
+  url: https://doi.org/10.1109/CVPR52729.2023.00101
+- abstract: "Multi-camera 3D object detection blossoms in recent years and most of\
+    \ state-of-the-art methods are built up on the bird\u2019 s-eye- view (BEV) representations.\
+    \ Albeit remarkable performance, these works suffer from low efficiency. Typically,\
+    \ knowledge distillation can be used for model compression. However, due to unclear\
+    \ 3D geometry reasoning, expert features usually contain some noisy and confusing\
+    \ areas. In this work, we investigate on how to distill the knowledge from an\
+    \ imperfect expert. We propose FD3D, a Focal Distiller for 3D object detection.\
+    \ Specifically, a set of queries are leveraged to locate the instance-level areas\
+    \ for masked feature generation, to intensify feature representation ability in\
+    \ these areas. Moreover, these queries search out the representative fine-grained\
+    \ positions for refined distillation. We verify the effectiveness of our method\
+    \ by applying it to two popular detection models, BEVFormer and DETR3D. The results\
+    \ demonstrate that our method achieves improvements of 4.07 and 3.17 points respectively\
+    \ in terms of NDS metric on nuScenes benchmark. Code is hosted at https://github.com/OpenPerceptionX/BEVPerception-Survey-Recipe."
+  keywords: Geometry, Computer vision, Three-dimensional displays, Codes, Computational
+    modeling, Object detection, Benchmark testing, Object Detection, 3D Detection,
+    3D Object Detection, Feature Representation, Ability Of Areas, Knowledge Transfer,
+    Local Patterns, Global Distribution, Bounding Box, Positive Identification, Background
+    Regions, Project Area, Depth Estimation, Focal Region, Masked Images, Linear Projection,
+    Feature Alignment, Network Of Experts, Distillation Method, Attention Heads, Distillation
+    Loss, 3D Bounding Box, High Computational Overhead, Autonomous driving
+  title: Distilling Focal Knowledge from Imperfect Expert for 3D Object Detection
+  url: https://doi.org/10.1109/CVPR52729.2023.00102
+- abstract: Despite recent advances in syncing lip movements with any audio waves,
+    current methods still struggle to balance generation quality and the model's generalization
+    ability. Previous studies either require long-term data for training or produce
+    a similar movement pattern on all subjects with low quality. In this paper, we
+    propose StyleSync, an effective framework that enables high-fidelity lip synchronization.
+    We identify that a style-based generator would sufficiently enable such a charming
+    property on both one-shot and few-shot scenarios. Specifically, we design a mask-guided
+    spatial information encoding module that preserves the details of the given face.
+    The mouth shapes are accurately modified by audio through modulated convolutions.
+    Moreover, our design also enables personalized lip-sync by introducing style space
+    and generator refinement on only limited frames. Thus the identity and talking
+    style of a target person could be accurately preserved. Extensive experiments
+    demonstrate the effectiveness of our method in producing high-fidelity results
+    on a variety of scenes. Resources can be found at https:/hangz-nju-cuhk.github.io/projects/StyleSync.
+  keywords: Training, Computer vision, Shape, Lips, Face recognition, Mouth, Generators,
+    Lip Movements, Image Quality, Reference Frame, Personal Data, General Data, Facial
+    Features, Reference Image, Backbone Network, Humeral Head, Training Objective,
+    Mouth Opening, Original Video, Audio Clips, Target Frame, Spatial Encoding, Head
+    Pose, Mean Opinion Score, Talking Head, Image and video synthesis and generation
+  title: 'StyleSync: High-Fidelity Generalized and Personalized Lip Sync in Style-Based
+    Generator'
+  url: https://doi.org/10.1109/CVPR52729.2023.00151
+- abstract: We study the problem of human action recognition using motion capture
+    (MoCap) sequences. Unlike existing techniques that take multiple manual steps
+    to derive standard-ized skeleton representations as model input, we propose a
+    novel Spatial-Temporal Mesh Transformer (STMT) to directly model the mesh sequences.
+    The model uses a hierarchical transformer with intra-frame off-set attention and
+    inter-frame self-attention. The attention mechanism allows the model to freely
+    attend between any two vertex patches to learn nonlocal relationships in the spatial-temporal
+    domain. Masked vertex modeling and future frame prediction are used as two self-supervised
+    tasks to fully activate the bi-directional and auto-regressive attention in our
+    hierarchical transformer. The proposed method achieves state-of-the-art performance
+    compared to skeleton-based and point-cloud-based models on common MoCap benchmarks.
+    Code is available at https://github.com/zgzxy001/STMT.
+  keywords: 'Computational modeling, Self-supervised learning, Manuals, Predictive
+    models, Transformers, Skeleton, Motion capture, Action Recognition, Prediction
+    Model, Attention Mechanism, Human Activity Recognition, Future Frames, Self-supervised
+    Task, Point Cloud, Entire Sequence, Temporal Sequence, 3D Point, Pose Estimation,
+    Self-supervised Learning, 3D Point Cloud, Connectivity Information, Fine-grained
+    Information, Single Patch, Imitation Learning, Mesh Vertices, Body Markers, 3D
+    Skeleton, Mesh Representation, Pretext Task, Action Recognition Model, Extrinsic
+    Curvature, Intrinsic Curvature, Pose Parameters, 3D Sequence, Surface Motion,
+    Body Parts, Temporal Dimension, Video: Action and event understanding'
+  title: 'STMT: A Spatial-Temporal Mesh Transformer for MoCap-Based Action Recognition'
+  url: https://doi.org/10.1109/CVPR52729.2023.00153
+- abstract: "Thanks to advances in computer vision and AI, there has been a large\
+    \ growth in the demand for cloud-based visual analytics in which images captured\
+    \ by a low-powered edge device are transmitted to the cloud for analytics. Use\
+    \ of conventional codecs (JPEG, MPEG, HEVC, etc.) for compressing such data introduces\
+    \ artifacts that can seriously degrade the performance of the downstream analytic\
+    \ tasks. Split-DNN computing has emerged as a paradigm to address such usages,\
+    \ in which a DNN is partitioned into a client-side portion and a server side portion.\
+    \ Low-complexity neural networks called \u2018bottleneck units' are introduced\
+    \ at the split point to transform the intermediate layer features into a lower-dimensional\
+    \ representation better suited for compression and transmission. Optimizing the\
+    \ pipeline for both compression and task-performance requires high-quality estimates\
+    \ of the information-theoretic rate of the intermediate features. Most works on\
+    \ compression for image analytics use heuristic approaches to estimate the rate,\
+    \ leading to suboptimal performance. We propose a high-quality \u2018neural rateestimator\u2019\
+    \ to address this gap. We interpret the lower-dimensional bottleneck output as\
+    \ a latent representation of the intermediate feature and cast the rate-distortion\
+    \ optimization problem as one of training an equivalent variational auto-encoder\
+    \ with an appropriate loss function. We show that this leads to improved rate-distortion\
+    \ outcomes. We further show that replacing supervised loss terms (such as cross-entropy\
+    \ loss) by distillation-based losses in a teacher-student framework allows for\
+    \ unsupervised training of bottleneck units without the need for explicit training\
+    \ labels. This makes our method very attractive for real world deployments where\
+    \ access to labeled training data is difficult or expensive. We demonstrate that\
+    \ our method outperforms several state-of-the-art methods by obtaining improved\
+    \ task accuracy at lower bi-trates on image classification and semantic segmentation\
+    \ tasks."
+  keywords: Training, Computer vision, Image coding, Visual analytics, Transform coding,
+    Rate-distortion, Training data, Loss Function, Neural Network, Task Performance,
+    Deep Neural Network, Classification Task, Image Classification, Task Accuracy,
+    Segmentation Task, Latent Representation, Variational Autoencoder, Intermediate
+    Features, Client-side, Unsupervised Training, Split Point, Advances In Computer
+    Vision, Mobile Devices, Dimensional Space, Convolutional Layers, Single Layer,
+    Joint Space, Encoder Output, Single Convolutional Layer, Bottleneck Layer, Compression
+    Level, Image Compression, Neural Architecture Search, Hyperprior, Teacher Network,
+    Neural Compression, Training Loss Function, Efficient and scalable vision
+  title: Neural Rate Estimator and Unsupervised Learning for Efficient Distributed
+    Image Analytics in Split-DNN models
+  url: https://doi.org/10.1109/CVPR52729.2023.00201
+- abstract: Self-attention mechanism has been a key factor in the recent progress
+    of Vision Transformer (ViT), which enables adaptive feature extraction from global
+    contexts. However, existing self-attention methods either adopt sparse global
+    attention or window attention to reduce the computation complexity, which may
+    compromise the local feature learning or subject to some handcrafted designs.
+    In contrast, local attention, which restricts the receptive field of each query
+    to its own neighboring pixels, enjoys the benefits of both convolution and self-attention,
+    namely local inductive bias and dynamic feature selection. Nevertheless, current
+    local attention modules either use inefficient Im2Col function or rely on specific
+    CUDA kernels that are hard to generalize to devices without CUDA support. In this
+    paper, we propose a novel local attention module, Slide Attention, which leverages
+    common convolution operations to achieve high efficiency, flexibility and generalizability.
+    Specifically, we first re-interpret the column-based Im2Col function from a new
+    row-based perspective and use Depthwise Convolution as an efficient substitution.
+    On this basis, we propose a deformed shifting module based on the re-parameterization
+    technique, which further relaxes the fixed key/value positions to deformed features
+    in the local region. In this way, our module realizes the local attention paradigm
+    in both efficient and flexible manner. Extensive experiments show that our slide
+    attention module is applicable to a variety of advanced Vision Transformer models
+    and compatible with various hardware devices, and achieves consistently improved
+    performances on comprehensive benchmarks.
+  keywords: Performance evaluation, Representation learning, Convolution, Graphics
+    processing units, Deep architecture, Transformers, Feature extraction, Vision
+    Transformer, Local Self-attention, New Perspective, Local Features, Efficient
+    Management, Receptive Field, Convolution Operation, Attention Module, Transformer
+    Model, Neighboring Pixels, Local Module, Self-attention Mechanism, Local Bias,
+    Hardware Devices, Inductive Bias, Local Attention, Depthwise Convolution, Model
+    Performance, Feature Maps, Linear Combination Of Features, Attention Patterns,
+    Single Convolution, Public Key, Parallel Paths, Semantic Segmentation, Traditional
+    Convolution, Multi-head Self-attention, Object Detection, Inference Time, Deep
+    learning architectures and techniques
+  title: 'Slide-Transformer: Hierarchical Vision Transformer with Local Self-Attention'
+  url: https://doi.org/10.1109/CVPR52729.2023.00207
